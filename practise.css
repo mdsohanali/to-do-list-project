@@ -1,0 +1,105 @@
+*{
+	margin:0;
+	padding:0;
+	font-family:poppins;
+	box-sizing:border-box;
+}
+body{
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,28,1) 0%, rgba(4,164,198,1) 79%, rgba(3,178,214,1) 90%, rgba(0,212,255,1) 100%);
+}
+.todoApp{
+	width:550px;
+	background:#fff;
+	padding:40px 20px;
+	border-radius:10px;
+	margin:100px auto 0;
+	
+	
+}
+.todoApp h2{
+	margin-bottom:20px;
+}
+
+.inputfild{
+	background:#ddd;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	border-radius:50px;
+}
+.inputfild input{
+	border:none;
+	outline:none;
+	flex:1;
+	background:transparent;
+	padding:10px 10px 10px 30px;
+	font-size:20px;
+}
+.inputfild button{
+	border: none;
+	  outline: none;
+	  background: red;
+	  font-size: 20px;
+	  padding: 10px 40px;
+	  border-radius: 50px;
+	  cursor: pointer;
+}
+#noValue{
+	text-align:center;
+	display:block;
+	color:red;
+	text-decoration:underline overline;
+	margin:10px 0px;
+}
+
+#listContent{
+	padding:0px 20px 0px 40px;
+	list-style:none;
+	position:relative;
+}
+#listContent li{
+	font-size:20px;
+	line-height:2em;
+	position:relative;
+	cursor:pointer;
+}
+#listContent li::before{
+	content:'';
+	width:20px;
+	height:20px;
+	position:absolute;
+	background-image:url(unchecked.png);
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	left:-30px;
+	top:10px;
+	
+}
+
+.clicked{
+	color:#666;
+	text-decoration:line-through;
+}
+.clicked::before{
+	background-image:url(checked.png)!important;
+	
+}
+
+
+#listContent li span{
+	position:absolute;
+	right:0;
+	cursor:pointer;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	color:black;
+	line-height:40px;
+	text-align:center;
+	
+}
+#listContent li span:hover{
+	background:#ddd;
+	color:black;
+}
